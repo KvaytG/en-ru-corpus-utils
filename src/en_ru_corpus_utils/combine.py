@@ -1,5 +1,3 @@
-from typing import List
-
 
 def _get_line(file_path: str):
     with open(file_path, 'r', encoding='utf-8') as source:
@@ -31,7 +29,7 @@ def uncombine_to_parallel_files(input_path: str,
                 f_target.write(f'{ru_text}\n')
 
 
-def merge_parallel_files(input_paths: List[str],
+def merge_parallel_files(input_paths: list[str],
                          output_path: str):
     with open(output_path, 'a', encoding='utf-8') as f_out:
         for path in input_paths:

@@ -1,3 +1,4 @@
+
 def _generate_date_formats(month: int,
                            day: int,
                            year: int):

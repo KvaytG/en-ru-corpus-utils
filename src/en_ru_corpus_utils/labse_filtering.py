@@ -1,4 +1,3 @@
-from typing import List, Set
 from model2vec import StaticModel
 import torch.nn.functional as F
 from torch import Tensor, tensor
@@ -12,11 +11,10 @@ def _cosine_similarity(vector1: Tensor, vector2: Tensor) -> float:
     return F.cosine_similarity(vector1, vector2).item()
 
 
-
 def _process_batch(model,
-                   en_texts: List[str],
-                   ru_texts: List[str],
-                   threshold: float) -> Set[str]:
+                   en_texts: list[str],
+                   ru_texts: list[str],
+                   threshold: float) -> set[str]:
     en_embeds = model.encode(en_texts, convert_to_tensor=True, device='cuda', normalize_embeddings=True)
     ru_embeds = model.encode(ru_texts, convert_to_tensor=True, device='cuda', normalize_embeddings=True)
     return {
