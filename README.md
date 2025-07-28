@@ -18,7 +18,7 @@ generate_months_corpus('data/months.txt')
 
 # 3. Semantic filtering (higher threshold)
 save_distilled_labse('data/labse_m2v_384')
-filter_by_labse('data/labse_m2v_384', 'data/1.txt', 'data/2.txt', 0.7)  # Higher threshold
+filter_by_labse('data/labse_m2v_384', 'data/1.txt', 'data/2.txt', 0.7)
 
 # 4. Structural cleanup
 clean_corpus_from_unpaired_quotes_and_brackets('data/2.txt', 'data/3.txt')

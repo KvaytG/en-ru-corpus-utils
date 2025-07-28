@@ -1,4 +1,3 @@
-
 def _generate_date_formats(month: int,
                            day: int,
                            year: int):
@@ -55,12 +54,16 @@ def _get_day_suffix(day: int) -> str:
 
 
 def generate_months_corpus(output_path: str):
+    print("Generating date pairs...")
     pairs = set()
-    for day in range(1, 30 + 1):
-        for month in range(1, 12 + 1):
-            for year in range(988, 2028 + 1):
+    for day in range(1, 31):
+        for month in range(1, 13):
+            for year in range(988, 2029):
                 for date_format in _generate_date_formats(month, day, year):
                     pairs.add(date_format)
+    print(f"Generated {len(pairs):,} unique date pairs.")
+    print(f"Saving to {output_path}...")
     with open(output_path, 'w', encoding='utf-8') as f:
         for sent in sorted(pairs):
             f.write(sent + '\n')
+
