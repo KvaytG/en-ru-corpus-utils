@@ -42,6 +42,6 @@ pip install git+https://github.com/KvaytG/en-ru-corpus-utils.git
 ```
 
 ## 📜 License
-en-ru-corpus-utils is licensed under the **[MIT license](https://opensource.org/license/mit)**.
+Licensed under the **[MIT](LICENSE.txt)** license.
 
 This project uses open-source components. For license details see **[pyproject.toml](pyproject.toml)** and dependencies' official websites.
