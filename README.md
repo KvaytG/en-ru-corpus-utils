@@ -41,6 +41,11 @@ filter_single_words('data/6.txt', 'data/final.txt',
 pip install git+https://github.com/KvaytG/en-ru-corpus-utils.git
 ```
 
+## ⚠️ Notice
+This project is **archived** and is no longer maintained.  
+No new features or bug fixes will be implemented.  
+Use at your own risk.
+
 ## 📜 License
 Licensed under the **[MIT](LICENSE.txt)** license.
 
